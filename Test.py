@@ -2,6 +2,7 @@ import requests
 from smtplib import SMTP
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+load_dotenv()
 
 api_key = os.getenv(API_KEY)
 lat = 6.524379
