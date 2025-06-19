@@ -3,7 +3,7 @@ from smtplib import SMTP
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-api_key = "358af6bca2c3a9fe7128dda7b6200384"
+api_key = os.getenv(API_KEY)
 lat = 6.524379
 lon = 3.379206
 
@@ -62,8 +62,8 @@ if "rain" in weather_main.lower() or "rain" in weather_description.lower():
 weather_msg += "\n\nStay safe and enjoy the day, no matter the weather! 🌈"
 
 
-my_email = "adeniyisulaiman27@gmail.com"
-app_password = "qpuz cxqd jcxj bquy"
+my_email = os.getenv("MY_EMAIL")
+app_password = os.getenv("EMAIL_PASSWORD")
 recipients = ["abdulganiyus03@gmail.com", "iwwaju@gmail.com", "wahajibola01@gmail.com"]
 
 subject = "Today's Weather Update"
